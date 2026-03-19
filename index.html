@@ -15,297 +15,83 @@
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', sans-serif; color: var(--text); background: var(--white); }
-
-    /* NAVBAR */
-    nav {
-      background: var(--primary);
-      padding: 16px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+    nav { background: var(--primary); padding: 16px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
     nav .logo { color: var(--gold); font-size: 20px; font-weight: 700; letter-spacing: 1px; }
     nav ul { list-style: none; display: flex; gap: 28px; }
     nav ul li a { color: var(--white); text-decoration: none; font-size: 15px; transition: color 0.3s; }
     nav ul li a:hover { color: var(--gold); }
-    .nav-cta {
-      background: var(--accent);
-      padding: 8px 20px;
-      border-radius: 5px;
-      color: var(--white) !important;
-      font-weight: 600;
-    }
+    .nav-cta { background: var(--accent); padding: 8px 20px; border-radius: 5px; color: var(--white) !important; font-weight: 600; }
     .nav-cta:hover { background: var(--gold) !important; color: var(--primary) !important; }
-
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, var(--primary) 55%, #16213e);
-      color: var(--white);
-      padding: 90px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 60px;
-      flex-wrap: wrap;
-    }
+    .hero { background: linear-gradient(135deg, var(--primary) 55%, #16213e); color: var(--white); padding: 90px 40px; display: flex; align-items: center; justify-content: center; gap: 60px; flex-wrap: wrap; }
     .hero-text { max-width: 620px; }
-    .hero-text .tag {
-      background: var(--accent);
-      color: var(--white);
-      font-size: 13px;
-      font-weight: 600;
-      padding: 5px 14px;
-      border-radius: 20px;
-      display: inline-block;
-      margin-bottom: 18px;
-      letter-spacing: 1px;
-    }
+    .hero-text .tag { background: var(--accent); color: var(--white); font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; display: inline-block; margin-bottom: 18px; letter-spacing: 1px; }
     .hero-text h1 { font-size: 44px; line-height: 1.3; margin-bottom: 18px; }
     .hero-text h1 span { color: var(--gold); }
     .hero-text p { font-size: 17px; opacity: 0.88; line-height: 1.8; margin-bottom: 30px; }
     .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-    .btn {
-      display: inline-block;
-      padding: 13px 32px;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 15px;
-      text-decoration: none;
-      transition: all 0.3s;
-    }
+    .btn { display: inline-block; padding: 13px 32px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; transition: all 0.3s; }
     .btn-primary { background: var(--accent); color: var(--white); }
     .btn-primary:hover { background: var(--gold); color: var(--primary); }
     .btn-outline { border: 2px solid var(--gold); color: var(--gold); }
     .btn-outline:hover { background: var(--gold); color: var(--primary); }
-    .hero-badge {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(245,166,35,0.4);
-      border-radius: 16px;
-      padding: 36px 32px;
-      text-align: center;
-      min-width: 220px;
-    }
+    .hero-badge { background: rgba(255,255,255,0.07); border: 1px solid rgba(245,166,35,0.4); border-radius: 16px; padding: 36px 32px; text-align: center; min-width: 220px; }
     .hero-badge .big { font-size: 52px; font-weight: 700; color: var(--gold); }
     .hero-badge .small { font-size: 14px; color: #ccc; margin-top: 4px; }
-
-    /* TRUST BAR */
-    .trust-bar {
-      background: var(--gold);
-      padding: 16px 40px;
-      display: flex;
-      justify-content: center;
-      gap: 50px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+    .trust-bar { background: var(--gold); padding: 16px 40px; display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; align-items: center; }
     .trust-bar span { font-weight: 700; color: var(--primary); font-size: 15px; letter-spacing: 0.5px; }
-
-    /* SECTIONS */
     section { padding: 60px 40px; }
     section h2 { text-align: center; font-size: 32px; color: var(--primary); margin-bottom: 10px; }
     .underline { width: 60px; height: 4px; background: var(--accent); margin: 0 auto 40px; border-radius: 2px; }
-
-    /* ABOUT */
-    .about-wrap {
-      display: flex;
-      gap: 50px;
-      max-width: 1000px;
-      margin: 0 auto;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .about-img {
-      width: 220px; height: 220px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 80px;
-      flex-shrink: 0;
-    }
+    .about-wrap { display: flex; gap: 50px; max-width: 1000px; margin: 0 auto; align-items: center; flex-wrap: wrap; }
+    .about-img { width: 220px; height: 220px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--accent)); display: flex; align-items: center; justify-content: center; font-size: 80px; flex-shrink: 0; }
     .about-text { flex: 1; min-width: 280px; }
     .about-text h3 { font-size: 24px; color: var(--primary); margin-bottom: 14px; }
     .about-text p { font-size: 15px; line-height: 1.8; margin-bottom: 14px; }
     .tags-wrap { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-    .tag-pill {
-      background: var(--primary);
-      color: var(--white);
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 500;
-    }
-
-    /* TEAM */
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .team-card {
-      background: var(--light);
-      border-radius: 12px;
-      padding: 32px 28px;
-      text-align: center;
-      border-top: 5px solid var(--gold);
-      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
-    }
+    .tag-pill { background: var(--primary); color: var(--white); padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 500; }
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; max-width: 800px; margin: 0 auto; }
+    .team-card { background: var(--light); border-radius: 12px; padding: 32px 28px; text-align: center; border-top: 5px solid var(--gold); box-shadow: 0 4px 18px rgba(0,0,0,0.07); }
     .team-card .avatar { font-size: 56px; margin-bottom: 14px; }
     .team-card h3 { font-size: 20px; color: var(--primary); margin-bottom: 6px; }
     .team-card .role { font-size: 13px; color: var(--accent); font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px; }
     .team-card p { font-size: 14px; line-height: 1.8; color: #555; margin-bottom: 16px; }
-    .team-card a {
-      display: inline-block;
-      background: #25D366;
-      color: var(--white);
-      padding: 9px 22px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-    }
+    .team-card a { display: inline-block; background: #25D366; color: var(--white); padding: 9px 22px; border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 600; }
     .team-card a:hover { background: var(--primary); }
-
-    /* SERVICES MINI GRID */
-    .mini-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .mini-card {
-      background: var(--white);
-      border-radius: 10px;
-      padding: 28px 24px;
-      border-top: 4px solid var(--accent);
-      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
-      transition: transform 0.3s;
-    }
+    .mini-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; }
+    .mini-card { background: var(--white); border-radius: 10px; padding: 28px 24px; border-top: 4px solid var(--accent); box-shadow: 0 4px 18px rgba(0,0,0,0.07); transition: transform 0.3s; }
     .mini-card:hover { transform: translateY(-5px); }
     .mini-card .icon { font-size: 32px; margin-bottom: 12px; }
     .mini-card h3 { font-size: 18px; color: var(--primary); margin-bottom: 8px; }
     .mini-card p { font-size: 14px; line-height: 1.7; }
     .mini-card a { color: var(--accent); font-size: 14px; font-weight: 600; text-decoration: none; display: inline-block; margin-top: 12px; }
-
-    /* HOW WE WORK */
-    .steps-wrap {
-      display: flex;
-      justify-content: center;
-      gap: 0;
-      max-width: 1000px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-    }
+    .steps-wrap { display: flex; justify-content: center; gap: 0; max-width: 1000px; margin: 0 auto; flex-wrap: wrap; }
     .step { flex: 1; min-width: 180px; text-align: center; padding: 28px 20px; position: relative; }
-    .step:not(:last-child)::after {
-      content: '→';
-      position: absolute;
-      right: -10px; top: 38px;
-      font-size: 24px;
-      color: var(--gold);
-    }
-    .step .circle {
-      width: 60px; height: 60px;
-      background: var(--primary);
-      color: var(--gold);
-      font-size: 22px;
-      font-weight: 700;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 14px;
-    }
+    .step:not(:last-child)::after { content: '→'; position: absolute; right: -10px; top: 38px; font-size: 24px; color: var(--gold); }
+    .step .circle { width: 60px; height: 60px; background: var(--primary); color: var(--gold); font-size: 22px; font-weight: 700; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
     .step h4 { font-size: 16px; color: var(--primary); margin-bottom: 8px; }
     .step p { font-size: 13px; line-height: 1.6; }
-
-    /* TESTIMONIALS */
-    .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .testi-card {
-      background: var(--light);
-      border-radius: 10px;
-      padding: 28px;
-      border-left: 5px solid var(--gold);
-    }
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+    .testi-card { background: var(--light); border-radius: 10px; padding: 28px; border-left: 5px solid var(--gold); }
     .testi-card p { font-size: 15px; font-style: italic; line-height: 1.8; margin-bottom: 16px; }
     .testi-card .author { font-weight: 700; color: var(--primary); font-size: 14px; }
     .testi-card .role { font-size: 13px; color: #777; }
-
-    /* STATS STRIP */
-    .stats-strip {
-      background: var(--primary);
-      color: var(--white);
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      padding: 50px 20px;
-      gap: 24px;
-    }
+    .stats-strip { background: var(--primary); color: var(--white); display: flex; justify-content: space-around; flex-wrap: wrap; padding: 50px 20px; gap: 24px; }
     .stat { text-align: center; }
     .stat .num { font-size: 44px; font-weight: 700; color: var(--gold); }
     .stat .label { font-size: 14px; margin-top: 6px; opacity: 0.8; }
-
-    /* CTA */
-    .cta-section {
-      background: linear-gradient(135deg, #e94560, #f5a623);
-      color: var(--white);
-      text-align: center;
-      padding: 70px 40px;
-    }
+    .cta-section { background: linear-gradient(135deg, #e94560, #f5a623); color: var(--white); text-align: center; padding: 70px 40px; }
     .cta-section h2 { font-size: 34px; margin-bottom: 14px; }
     .cta-section p { font-size: 18px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
     .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .btn-white {
-      background: var(--white);
-      color: var(--accent);
-      padding: 14px 36px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 15px;
-    }
+    .btn-white { background: var(--white); color: var(--accent); padding: 14px 36px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 15px; }
     .btn-white:hover { background: var(--primary); color: var(--white); }
-    .btn-green {
-      background: #25D366;
-      color: var(--white);
-      padding: 14px 36px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 15px;
-    }
+    .btn-green { background: #25D366; color: var(--white); padding: 14px 36px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 15px; }
     .btn-green:hover { background: var(--primary); }
-
-    /* FOOTER */
-    footer {
-      background: var(--primary);
-      color: #aaa;
-      padding: 36px 40px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-      font-size: 14px;
-    }
+    footer { background: var(--primary); color: #aaa; padding: 36px 40px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; font-size: 14px; }
     footer .foot-brand { color: var(--gold); font-size: 18px; font-weight: 700; margin-bottom: 8px; }
     footer a { color: var(--gold); text-decoration: none; }
     footer ul { list-style: none; }
     footer ul li { margin-bottom: 8px; }
-
-    /* MOBILE */
     @media (max-width: 768px) {
       .hero { padding: 60px 20px; }
       .hero-text h1 { font-size: 28px; }
@@ -331,15 +117,42 @@
   </ul>
 </nav>
 
-<!-- HERO -->
+<!-- HERO WITH COUNTDOWN -->
 <div class="hero">
   <div class="hero-text">
     <span class="tag">🚀 BENGALURU · INDIA · GLOBAL</span>
     <h1>Build Your <span>GCC</span> Right.<br/>Exit Your <span>Venture</span> Safely.</h1>
     <p>20+ years across Cargill, Oracle & EMEA/APAC operations. Finance-led GCC setup, venture exit protection, and O2C/SAP transformation — all under one roof.</p>
+
+    <!-- LAUNCH COUNTDOWN BOX -->
+    <div id="launch-box" style="background:rgba(255,255,255,0.08);border:2px solid var(--gold);border-radius:12px;padding:20px 28px;margin-bottom:28px;text-align:center;">
+      <div style="font-size:13px;color:var(--gold);font-weight:700;letter-spacing:1px;margin-bottom:12px;">
+        🎉 OFFICIAL LAUNCH — 19th March 2026, 9:00 PM IST
+      </div>
+      <div id="countdown" style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;align-items:center;">
+        <div style="text-align:center;">
+          <div id="c-hours" style="font-size:48px;font-weight:700;color:var(--gold);line-height:1;">00</div>
+          <div style="font-size:12px;color:#ccc;margin-top:4px;letter-spacing:1px;">HOURS</div>
+        </div>
+        <div style="font-size:48px;font-weight:700;color:var(--gold);">:</div>
+        <div style="text-align:center;">
+          <div id="c-minutes" style="font-size:48px;font-weight:700;color:var(--gold);line-height:1;">00</div>
+          <div style="font-size:12px;color:#ccc;margin-top:4px;letter-spacing:1px;">MINUTES</div>
+        </div>
+        <div style="font-size:48px;font-weight:700;color:var(--gold);">:</div>
+        <div style="text-align:center;">
+          <div id="c-seconds" style="font-size:48px;font-weight:700;color:var(--gold);line-height:1;">00</div>
+          <div style="font-size:12px;color:#ccc;margin-top:4px;letter-spacing:1px;">SECONDS</div>
+        </div>
+      </div>
+      <div id="launched-msg" style="display:none;font-size:24px;font-weight:700;color:var(--gold);padding:10px 0;">
+        🎊 GCC Ventures India is LIVE! Welcome!
+      </div>
+    </div>
+
     <div class="hero-btns">
       <a href="https://wa.me/919611991902" class="btn btn-primary" target="_blank">💬 WhatsApp Sanjeev →</a>
-      <a href="gcc-services.html" class="btn btn-outline">View All Services</a>
+      <a href="services.html" class="btn btn-outline">View All Services</a>
     </div>
   </div>
   <div class="hero-badge">
@@ -347,6 +160,23 @@
     <div class="small">Years of GCC &<br/>Finance Operations</div>
   </div>
 </div>
+
+<!-- COUNTDOWN SCRIPT -->
+<script>
+  var launch = new Date(2026, 2, 19, 21, 0, 0); // 19 Mar 2026, 9:00 PM
+  var ticker = setInterval(function() {
+    var gap = launch - new Date();
+    if (gap <= 0) {
+      clearInterval(ticker);
+      document.getElementById('countdown').style.display = 'none';
+      document.getElementById('launched-msg').style.display = 'block';
+      return;
+    }
+    document.getElementById('c-hours').innerText = String(Math.floor(gap/3600000)).padStart(2,'0');
+    document.getElementById('c-minutes').innerText = String(Math.floor((gap%3600000)/60000)).padStart(2,'0');
+    document.getElementById('c-seconds').innerText = String(Math.floor((gap%60000)/1000)).padStart(2,'0');
+  }, 1000);
+</script>
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
@@ -411,31 +241,31 @@
       <div class="icon">🏗️</div>
       <h3>GCC Setup Advisory</h3>
       <p>Full setup: entity, talent, compliance, SAP, O2C/P2P ops. India-based, globally aligned.</p>
-      <a href="gcc-services.html#services">Learn More →</a>
+      <a href="services.html#services">Learn More →</a>
     </div>
     <div class="mini-card">
       <div class="icon">📤</div>
       <h3>Venture Exit Consulting</h3>
       <p>3-year exit roadmaps. Legal safeguards against conglomerate incubation traps.</p>
-      <a href="gcc-services.html#safeguard">Learn More →</a>
+      <a href="services.html#safeguard">Learn More →</a>
     </div>
     <div class="mini-card">
       <div class="icon">🛡️</div>
       <h3>Exit Safeguard Framework</h3>
       <p>MSA/SOW drafting, put/call options, non-circumvention clauses — before you sign anything.</p>
-      <a href="gcc-services.html#services">Learn More →</a>
+      <a href="services.html#services">Learn More →</a>
     </div>
     <div class="mini-card">
       <div class="icon">💰</div>
       <h3>Finance Due Diligence</h3>
       <p>Buyer-ready books: AR/AP clean-up, DSO reduction, working capital optimization.</p>
-      <a href="gcc-services.html#services">Learn More →</a>
+      <a href="services.html#services">Learn More →</a>
     </div>
     <div class="mini-card">
       <div class="icon">🔄</div>
       <h3>BOT Model GCC</h3>
       <p>Build-Operate-Transfer. We build your GCC, run it 12–24 months, hand over cleanly.</p>
-      <a href="gcc-services.html#services">Learn More →</a>
+      <a href="services.html#services">Learn More →</a>
     </div>
     <div class="mini-card">
       <div class="icon">🎓</div>
@@ -527,7 +357,7 @@
   <div>
     <ul>
       <li><a href="#services">Services</a></li>
-      <li><a href="gcc-services.html">Full Services Page</a></li>
+      <li><a href="services.html">Full Services Page</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </div>
@@ -538,7 +368,7 @@
       <li><a href="https://linkedin.com/in/sanjeev-sharma" target="_blank">LinkedIn</a></li>
     </ul>
   </div>
-  <div style="font-size:13px; align-self: flex-end;">
+  <div style="font-size:13px; align-self:flex-end;">
     <p>© 2026 GCC Ventures India</p>
     <p style="margin-top:4px;">All rights reserved.</p>
   </div>
