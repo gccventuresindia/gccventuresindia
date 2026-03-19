@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sanjeev Sharma | GCC Advisory & Venture Exit Consulting</title>
+  <title>GCC Ventures India | GCC Setup & Venture Exit Consulting</title>
   <style>
     :root {
       --primary: #1a1a2e;
@@ -101,12 +101,7 @@
       flex-wrap: wrap;
       align-items: center;
     }
-    .trust-bar span {
-      font-weight: 700;
-      color: var(--primary);
-      font-size: 15px;
-      letter-spacing: 0.5px;
-    }
+    .trust-bar span { font-weight: 700; color: var(--primary); font-size: 15px; letter-spacing: 0.5px; }
 
     /* SECTIONS */
     section { padding: 60px 40px; }
@@ -123,8 +118,7 @@
       flex-wrap: wrap;
     }
     .about-img {
-      width: 220px;
-      height: 220px;
+      width: 220px; height: 220px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--primary), var(--accent));
       display: flex;
@@ -145,6 +139,38 @@
       font-size: 13px;
       font-weight: 500;
     }
+
+    /* TEAM */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .team-card {
+      background: var(--light);
+      border-radius: 12px;
+      padding: 32px 28px;
+      text-align: center;
+      border-top: 5px solid var(--gold);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+    }
+    .team-card .avatar { font-size: 56px; margin-bottom: 14px; }
+    .team-card h3 { font-size: 20px; color: var(--primary); margin-bottom: 6px; }
+    .team-card .role { font-size: 13px; color: var(--accent); font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px; }
+    .team-card p { font-size: 14px; line-height: 1.8; color: #555; margin-bottom: 16px; }
+    .team-card a {
+      display: inline-block;
+      background: #25D366;
+      color: var(--white);
+      padding: 9px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .team-card a:hover { background: var(--primary); }
 
     /* SERVICES MINI GRID */
     .mini-grid {
@@ -177,18 +203,11 @@
       margin: 0 auto;
       flex-wrap: wrap;
     }
-    .step {
-      flex: 1;
-      min-width: 180px;
-      text-align: center;
-      padding: 28px 20px;
-      position: relative;
-    }
+    .step { flex: 1; min-width: 180px; text-align: center; padding: 28px 20px; position: relative; }
     .step:not(:last-child)::after {
       content: '→';
       position: absolute;
-      right: -10px;
-      top: 38px;
+      right: -10px; top: 38px;
       font-size: 24px;
       color: var(--gold);
     }
@@ -248,16 +267,27 @@
     }
     .cta-section h2 { font-size: 34px; margin-bottom: 14px; }
     .cta-section p { font-size: 18px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
     .btn-white {
       background: var(--white);
       color: var(--accent);
-      padding: 14px 40px;
+      padding: 14px 36px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 700;
-      font-size: 16px;
+      font-size: 15px;
     }
     .btn-white:hover { background: var(--primary); color: var(--white); }
+    .btn-green {
+      background: #25D366;
+      color: var(--white);
+      padding: 14px 36px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .btn-green:hover { background: var(--primary); }
 
     /* FOOTER */
     footer {
@@ -273,7 +303,7 @@
     footer .foot-brand { color: var(--gold); font-size: 18px; font-weight: 700; margin-bottom: 8px; }
     footer a { color: var(--gold); text-decoration: none; }
     footer ul { list-style: none; }
-    footer ul li { margin-bottom: 6px; }
+    footer ul li { margin-bottom: 8px; }
 
     /* MOBILE */
     @media (max-width: 768px) {
@@ -283,6 +313,7 @@
       .step:not(:last-child)::after { display: none; }
       section { padding: 40px 20px; }
       footer { flex-direction: column; }
+      .cta-btns { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
@@ -290,13 +321,13 @@
 
 <!-- NAVBAR -->
 <nav>
-  <div class="logo">Sanjeev Sharma | GCC Advisory</div>
+  <div class="logo">GCC Ventures India</div>
   <ul>
     <li><a href="#about">About</a></li>
+    <li><a href="#team">Team</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#how">How It Works</a></li>
-    <li><a href="#testimonials">Clients</a></li>
-    <li><a href="gcc-services.html" class="nav-cta">All Services →</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us →</a></li>
   </ul>
 </nav>
 
@@ -305,9 +336,9 @@
   <div class="hero-text">
     <span class="tag">🚀 BENGALURU · INDIA · GLOBAL</span>
     <h1>Build Your <span>GCC</span> Right.<br/>Exit Your <span>Venture</span> Safely.</h1>
-    <p>20+ years across Cargill, Oracle & EMEA/APAC operations. Finance-led GCC setup, venture exit protection, and O2C/SAP transformation — all in one advisory.</p>
+    <p>20+ years across Cargill, Oracle & EMEA/APAC operations. Finance-led GCC setup, venture exit protection, and O2C/SAP transformation — all under one roof.</p>
     <div class="hero-btns">
-      <a href="https://topmate.io/sanjeev_sharma" class="btn btn-primary">Book Free Discovery Call →</a>
+      <a href="https://wa.me/919611991902" class="btn btn-primary" target="_blank">💬 WhatsApp Sanjeev →</a>
       <a href="gcc-services.html" class="btn btn-outline">View All Services</a>
     </div>
   </div>
@@ -327,14 +358,14 @@
 
 <!-- ABOUT -->
 <section id="about">
-  <h2>About Sanjeev Sharma</h2>
+  <h2>About GCC Ventures India</h2>
   <div class="underline"></div>
   <div class="about-wrap">
-    <div class="about-img">👤</div>
+    <div class="about-img">🏛️</div>
     <div class="about-text">
-      <h3>Finance Operations Leader turned GCC Architect</h3>
-      <p>I spent 20+ years transforming finance operations at global giants — Cargill, Oracle, and before that, the Merchant Navy. I've led 60+ member teams, built GCCs across EMEA (25+ countries), implemented SAP S/4HANA, and driven DSO reductions through RPA automation.</p>
-      <p>Today I help companies set up lean, high-performing GCCs in India — and help venture founders protect their exits from conglomerate traps that drain 3 years of effort without a payoff.</p>
+      <h3>Finance Operations meets Venture Exit Expertise</h3>
+      <p>GCC Ventures India is a Bengaluru-based advisory founded by Sanjeev Sharma and Nagraj — combining 20+ years of finance operations leadership with deep venture exit consulting experience.</p>
+      <p>We help global companies build lean, high-performing GCCs in India — and help venture founders protect their exits from conglomerate traps that drain years of effort without a fair payoff.</p>
       <div class="tags-wrap">
         <span class="tag-pill">GCC Setup</span>
         <span class="tag-pill">O2C / P2P</span>
@@ -349,8 +380,30 @@
   </div>
 </section>
 
+<!-- TEAM -->
+<section id="team" style="background: var(--light);">
+  <h2>Meet the Team</h2>
+  <div class="underline"></div>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="avatar">👤</div>
+      <h3>Sanjeev Sharma</h3>
+      <div class="role">GCC SETUP & FINANCE OPS LEAD</div>
+      <p>20+ years at Cargill & Oracle. SAP S/4HANA, O2C/P2P, RPA automation, 60+ team leadership across EMEA/APAC and 25+ countries.</p>
+      <a href="https://wa.me/919611991902" target="_blank">💬 +91-96119-91902</a>
+    </div>
+    <div class="team-card">
+      <div class="avatar">👤</div>
+      <h3>Nagraj</h3>
+      <div class="role">VENTURE EXIT CONSULTING LEAD</div>
+      <p>Specialist in structured 3-year venture exits. Legal safeguards, conglomerate exit frameworks, valuation protection and buyer negotiations.</p>
+      <a href="https://wa.me/919739974902" target="_blank">💬 +91-97399-74902</a>
+    </div>
+  </div>
+</section>
+
 <!-- SERVICES -->
-<section id="services" style="background: var(--light);">
+<section id="services">
   <h2>What We Do</h2>
   <div class="underline"></div>
   <div class="mini-grid">
@@ -363,8 +416,14 @@
     <div class="mini-card">
       <div class="icon">📤</div>
       <h3>Venture Exit Consulting</h3>
-      <p>3-year exit roadmaps. Legal safeguards against conglomerate incubation traps. Real protection.</p>
+      <p>3-year exit roadmaps. Legal safeguards against conglomerate incubation traps.</p>
       <a href="gcc-services.html#safeguard">Learn More →</a>
+    </div>
+    <div class="mini-card">
+      <div class="icon">🛡️</div>
+      <h3>Exit Safeguard Framework</h3>
+      <p>MSA/SOW drafting, put/call options, non-circumvention clauses — before you sign anything.</p>
+      <a href="gcc-services.html#services">Learn More →</a>
     </div>
     <div class="mini-card">
       <div class="icon">💰</div>
@@ -379,50 +438,44 @@
       <a href="gcc-services.html#services">Learn More →</a>
     </div>
     <div class="mini-card">
-      <div class="icon">🤖</div>
-      <h3>RPA & Automation</h3>
-      <p>Autobank, Serella, payment matching, dunning workflows — cut manual ops by 60%+.</p>
-      <a href="gcc-services.html#services">Learn More →</a>
-    </div>
-    <div class="mini-card">
       <div class="icon">🎓</div>
-      <h3>Finance Coaching</h3>
-      <p>1-on-1 for leaders scaling GCC teams. O2C mastery, collections strategy, RPA tools.</p>
-      <a href="https://topmate.io/sanjeev_sharma">Book Now →</a>
+      <h3>Finance Ops Coaching</h3>
+      <p>1-on-1 for leaders scaling GCC teams: O2C mastery, collections strategy, RPA tools.</p>
+      <a href="contact.html">Enquire →</a>
     </div>
   </div>
 </section>
 
 <!-- HOW WE WORK -->
-<section id="how">
+<section id="how" style="background: var(--light);">
   <h2>How It Works</h2>
   <div class="underline"></div>
   <div class="steps-wrap">
     <div class="step">
       <div class="circle">1</div>
-      <h4>Discovery Call</h4>
-      <p>Free 30-min call to understand your GCC or exit goals.</p>
+      <h4>WhatsApp / Call</h4>
+      <p>Reach Sanjeev or Nagraj directly — tell us your GCC or exit goal.</p>
     </div>
     <div class="step">
       <div class="circle">2</div>
       <h4>Scope & Contract</h4>
-      <p>MSA + SOW with milestones, fees, and legal safeguards signed.</p>
+      <p>MSA + SOW with milestones, fees, and legal safeguards signed upfront.</p>
     </div>
     <div class="step">
       <div class="circle">3</div>
       <h4>Execution</h4>
-      <p>GCC setup or exit roadmap delivered in phases with KPI gates.</p>
+      <p>GCC setup or exit roadmap delivered in phases with KPI milestone gates.</p>
     </div>
     <div class="step">
       <div class="circle">4</div>
       <h4>Handover</h4>
-      <p>BOT transfer, valuation, or coached team — fully documented.</p>
+      <p>BOT transfer, clean exit valuation, or coached team — fully documented.</p>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section id="testimonials" style="background: var(--light);">
+<section>
   <h2>Client Voices</h2>
   <div class="underline"></div>
   <div class="testi-grid">
@@ -432,57 +485,61 @@
       <div class="role">EMEA Manufacturing Firm</div>
     </div>
     <div class="testi-card">
-      <p>"The venture exit safeguard contract he drafted protected us when our conglomerate funder tried to back out. We got paid in full."</p>
+      <p>"The venture exit safeguard contract protected us when our conglomerate funder tried to back out. We got paid in full."</p>
       <div class="author">Founder</div>
       <div class="role">B2B Startup, Bengaluru</div>
     </div>
     <div class="testi-card">
-      <p>"DSO reduced by 22 days in 6 months using his O2C transformation playbook. Remarkable and practical."</p>
+      <p>"DSO reduced by 22 days in 6 months using the O2C transformation playbook. Remarkable and very practical."</p>
       <div class="author">VP Finance</div>
       <div class="role">APAC Shared Services</div>
     </div>
   </div>
 </section>
 
-<!-- STATS STRIP -->
+<!-- STATS -->
 <div class="stats-strip">
   <div class="stat"><div class="num">20+</div><div class="label">Years Experience</div></div>
   <div class="stat"><div class="num">25+</div><div class="label">Countries Managed</div></div>
   <div class="stat"><div class="num">60+</div><div class="label">Team Members Led</div></div>
   <div class="stat"><div class="num">5</div><div class="label">Venture Exits Planned</div></div>
-  <div class="stat"><div class="num">3</div><div class="label">GCC Setups Delivered</div></div>
+  <div class="stat"><div class="num">2</div><div class="label">GCC Setups Delivered</div></div>
 </div>
 
 <!-- CTA -->
 <div class="cta-section">
-  <h2>Let's Build Something That Lasts</h2>
-  <p>GCC setup, venture exit protection, or finance transformation — let's talk for 30 minutes, no obligation.</p>
-  <a href="https://topmate.io/sanjeev_sharma" class="btn-white">Book Free Call →</a>
+  <h2>Ready to Build or Exit?</h2>
+  <p>WhatsApp Sanjeev for GCC setup or Nagraj for venture exit — free first conversation, no obligation.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/919611991902" class="btn-green" target="_blank">💬 WhatsApp Sanjeev</a>
+    <a href="https://wa.me/919739974902" class="btn-green" target="_blank">💬 WhatsApp Nagraj</a>
+    <a href="contact.html" class="btn-white">Send a Message →</a>
+  </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
   <div>
-    <div class="foot-brand">Sanjeev Sharma | GCC Advisory</div>
+    <div class="foot-brand">GCC Ventures India</div>
     <p>Bengaluru, Karnataka, India</p>
     <p style="margin-top:8px;"><a href="mailto:sanjeev@gcc-advisory.com">sanjeev@gcc-advisory.com</a></p>
   </div>
   <div>
     <ul>
       <li><a href="#services">Services</a></li>
-      <li><a href="gcc-services.html">Full Service Page</a></li>
-      <li><a href="https://topmate.io/sanjeev_sharma">Book a Call</a></li>
+      <li><a href="gcc-services.html">Full Services Page</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </div>
   <div>
     <ul>
+      <li><a href="https://wa.me/919611991902" target="_blank">💬 Sanjeev: +91-96119-91902</a></li>
+      <li><a href="https://wa.me/919739974902" target="_blank">💬 Nagraj: +91-97399-74902</a></li>
       <li><a href="https://linkedin.com/in/sanjeev-sharma" target="_blank">LinkedIn</a></li>
-      <li><a href="https://sanjeevsharmasan.github.io" target="_blank">Personal Site</a></li>
-      <li><a href="https://velocityautoindia.github.io" target="_blank">Velocity Auto India</a></li>
     </ul>
   </div>
   <div style="font-size:13px; align-self: flex-end;">
-    <p>© 2026 Sanjeev Sharma GCC Advisory</p>
+    <p>© 2026 GCC Ventures India</p>
     <p style="margin-top:4px;">All rights reserved.</p>
   </div>
 </footer>
