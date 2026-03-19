@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | GCC Ventures India</title>
+  <style>
+    :root {
+      --primary: #1a1a2e;
+      --accent: #e94560;
+      --gold: #f5a623;
+      --light: #f4f4f4;
+      --white: #ffffff;
+      --text: #333333;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; color: var(--text); background: var(--white); }
+    nav { background: var(--primary); padding: 16px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    nav .logo { color: var(--gold); font-size: 20px; font-weight: 700; }
+    nav ul { list-style: none; display: flex; gap: 28px; }
+    nav ul li a { color: var(--white); text-decoration: none; font-size: 15px; transition: color 0.3s; }
+    nav ul li a:hover { color: var(--gold); }
+    .nav-cta { background: var(--accent); padding: 8px 20px; border-radius: 5px; color: var(--white) !important; font-weight: 600; }
+    .page-hero { background: linear-gradient(135deg, var(--primary), #16213e); color: var(--white); text-align: center; padding: 60px 40px; }
+    .page-hero h1 { font-size: 38px; margin-bottom: 12px; }
+    .page-hero h1 span { color: var(--gold); }
+    .page-hero p { font-size: 17px; opacity: 0.88; max-width: 580px; margin: 0 auto; }
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 60px auto; padding: 0 40px; }
+    .form-box { background: var(--light); border-radius: 12px; padding: 36px 32px; border-top: 5px solid var(--accent); }
+    .form-box h2 { font-size: 22px; color: var(--primary); margin-bottom: 22px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 6px; }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px 14px; border: 1.5px solid #ddd; border-radius: 6px; font-size: 15px; font-family: 'Segoe UI', sans-serif; transition: border 0.3s; background: var(--white); }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--accent); }
+    .form-group textarea { height: 120px; resize: vertical; }
+    .submit-btn { width: 100%; background: var(--accent); color: var(--white); padding: 14px; border: none; border-radius: 6px; font-size: 16px; font-weight: 700; cursor: pointer; transition: background 0.3s; }
+    .submit-btn:hover { background: var(--gold); color: var(--primary); }
+    .info-box { display: flex; flex-direction: column; gap: 18px; }
+    .info-box h2 { font-size: 22px; color: var(--primary); margin-bottom: 4px; }
+    .info-box p { font-size: 15px; line-height: 1.8; color: #555; }
+    .contact-card { background: var(--light); border-radius: 10px; padding: 20px 22px; display: flex; align-items: center; gap: 16px; border-left: 5px solid var(--gold); text-decoration: none; color: var(--text); transition: transform 0.3s, box-shadow 0.3s; }
+    .contact-card:hover { transform: translateX(6px); box-shadow: 0 6px 20px rgba(0,0,0,0.09); }
+    .contact-card .ci { font-size: 30px; }
+    .contact-card .cd h4 { font-size: 15px; color: var(--primary); font-weight: 700; }
+    .contact-card .cd p { font-size: 14px; color: #666; margin-top: 2px; }
+    .divider { font-size: 13px; font-weight: 700; color: #999; text-transform: uppercase; letter-spacing: 1px; padding: 4px 0; }
+    .whatsapp-banner { background: #25D366; border-radius: 12px; padding: 24px; text-align: center; color: var(--white); }
+    .whatsapp-banner h3 { font-size: 18px; margin-bottom: 8px; }
+    .whatsapp-banner p { font-size: 14px; opacity: 0.9; margin-bottom: 16px; }
+    .whatsapp-banner .wa-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .wa-btn { background: var(--white); color: #25D366; padding: 10px 22px; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 14px; }
+    .wa-btn:hover { background: var(--primary); color: var(--white); }
+    .availability { background: #f0fff4; border: 1.5px solid #b2f5c8; border-radius: 10px; padding: 16px 18px; font-size: 14px; line-height: 1.9; }
+    .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #22c55e; margin-right: 6px; animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
+    .faq-wrap { max-width: 800px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid #eee; padding: 20px 0; }
+    .faq-item h4 { font-size: 16px; color: var(--primary); margin-bottom: 8px; }
+    .faq-item p { font-size: 14px; line-height: 1.8; color: #555; }
+    footer { background: var(--primary); color: #aaa; text-align: center; padding: 28px; font-size: 14px; margin-top: 60px; }
+    footer a { color: var(--gold); text-decoration: none; }
+    @media (max-width: 768px) {
+      .contact-wrap { grid-template-columns: 1fr; padding: 0 20px; margin: 40px auto; }
+      .page-hero h1 { font-size: 26px; }
+      nav ul { display: none; }
+      .whatsapp-banner .wa-btns { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">GCC Ventures India</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact →</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <h1>Let's Talk <span>GCC</span> or <span>Venture Exit</span></h1>
+  <p>WhatsApp us directly — Sanjeev for GCC & Finance, Nagraj for Venture Exit. Response within 2 hours.</p>
+</div>
+
+<div class="contact-wrap">
+  <div class="form-box">
+    <h2>📩 Send a Message</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-group">
+        <label>Your Name *</label>
+        <input type="text" name="name" placeholder="Rajesh Kumar" required/>
+      </div>
+      <div class="form-group">
+        <label>Email Address *</label>
+        <input type="email" name="email" placeholder="rajesh@company.com" required/>
+      </div>
+      <div class="form-group">
+        <label>Phone / WhatsApp</label>
+        <input type="tel" name="phone" placeholder="+91 98765 43210"/>
+      </div>
+      <div class="form-group">
+        <label>I Need Help With *</label>
+        <select name="service" required>
+          <option value="">-- Select a Service --</option>
+          <option>GCC Setup Advisory</option>
+          <option>Venture Exit Consulting</option>
+          <option>Exit Safeguard Framework</option>
+          <option>Finance Due Diligence</option>
+          <option>BOT Model GCC</option>
+          <option>Finance Ops Coaching</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Your Message *</label>
+        <textarea name="message" placeholder="Tell us briefly what you're working on..." required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message →</button>
+    </form>
+  </div>
+
+  <div class="info-box">
+    <div>
+      <h2>📍 Reach Us Directly</h2>
+      <p>Bengaluru-based. Available for India, EMEA & APAC clients. Fastest response via WhatsApp.</p>
+    </div>
+
+    <div class="divider">— GCC Setup & Finance Ops —</div>
+
+    <a href="https://wa.me/919611991902" class="contact-card" target="_blank">
+      <div class="ci">💬</div>
+      <div class="cd">
+        <h4>WhatsApp — Sanjeev Sharma</h4>
+        <p>+91-96119-91902 · GCC Setup, Finance Ops, O2C/SAP</p>
+      </div>
+    </a>
+
+    <a href="mailto:sanjeev@gcc-advisory.com" class="contact-card">
+      <div class="ci">📧</div>
+      <div class="cd">
+        <h4>Email — Sanjeev Sharma</h4>
+        <p>sanjeev@gcc-advisory.com</p>
+      </div>
+    </a>
+
+    <a href="https://linkedin.com/in/sanjeev-sharma" class="contact-card" target="_blank">
+      <div class="ci">🔷</div>
+      <div class="cd">
+        <h4>LinkedIn — Sanjeev Sharma</h4>
+        <p>Connect for GCC & finance network</p>
+      </div>
+    </a>
+
+    <div class="divider">— Venture Exit Consulting —</div>
+
+    <a href="https://wa.me/919739974902" class="contact-card" target="_blank">
+      <div class="ci">💬</div>
+      <div class="cd">
+        <h4>WhatsApp — Nagraj</h4>
+        <p>+91-97399-74902 · Venture Exit, Safeguard Framework</p>
+      </div>
+    </a>
+
+    <div class="whatsapp-banner">
+      <h3>💬 Quickest Way to Reach Us</h3>
+      <p>WhatsApp either of us — we respond within 2 hours on weekdays.</p>
+      <div class="wa-btns">
+        <a href="https://wa.me/919611991902" class="wa-btn" target="_blank">WhatsApp Sanjeev</a>
+        <a href="https://wa.me/919739974902" class="wa-btn" target="_blank">WhatsApp Nagraj</a>
+      </div>
+    </div>
+
+    <div class="availability">
+      <span class="dot"></span>
+      <strong>Currently Available</strong> for new engagements.<br/>
+      📅 Mon–Fri: 9 AM – 6 PM IST<br/>
+      🌍 Remote: EMEA & APAC calls welcome<br/>
+      📍 Bengaluru, Karnataka, India
+    </div>
+  </div>
+</div>
+
+<section style="padding: 50px 40px; background: var(--light);">
+  <h2 style="text-align:center; font-size:28px; color:var(--primary); margin-bottom:8px;">Frequently Asked Questions</h2>
+  <div style="width:60px;height:4px;background:var(--accent);margin:0 auto 36px;border-radius:2px;"></div>
+  <div class="faq-wrap">
+    <div class="faq-item">
+      <h4>What does a GCC setup engagement look like?</h4>
+      <p>Typically 3–6 months: entity setup, talent hiring, SAP/O2C/P2P configuration, and handover. We sign a milestone-based SOW upfront so you know exactly what you're paying for.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How do you protect my venture exit from conglomerate risks?</h4>
+      <p>We draft MSA + SOW with put/call options, non-circumvention clauses, and exit veto clauses before any engagement begins. No work starts without legal safeguards in place.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do you work with startups or only large companies?</h4>
+      <p>Both. GCC setup clients are typically mid-to-large firms. Venture exit consulting suits founder-led startups with conglomerate or PE funding seeking structured exits.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What is your fee structure?</h4>
+      <p>GCC setup: project-based milestones. Venture exit: 40% monthly retainer + 60% success fee. We discuss this openly in the first call — no surprises.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Are you available for international clients?</h4>
+      <p>Yes — EMEA and APAC remote engagements welcome. Previously managed 25+ countries at Cargill and Oracle across all time zones.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 GCC Ventures India | Bengaluru, India |
+    <a href="https://linkedin.com/in/sanjeev-sharma" target="_blank">LinkedIn</a> |
+    <a href="mailto:sanjeev@gcc-advisory.com">sanjeev@gcc-advisory.com</a>
+  </p>
+</footer>
+
+</body>
+</html>
